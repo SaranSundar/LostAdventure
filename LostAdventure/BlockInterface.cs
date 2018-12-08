@@ -1,7 +1,12 @@
 ﻿using System;
+using Microsoft.Xna.Framework.Graphics;
+
 namespace LostAdventure.MacOS
 {
-    public interface BlockInterface
+    interface BlockInterface
     {
+        void update(Player player);
+
+        void draw(SpriteBatch sb, Texture2D sh);
     }
 }

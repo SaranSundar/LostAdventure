@@ -60,6 +60,24 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Block.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="SpriteSheet.cs" />
+    <Compile Include="AttackSpriteSheet.cs" />
+    <Compile Include="BlockInterface.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CharacterInterface.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DepthBlock.cs" />
+    <Compile Include="EntranceBlock.cs" />
+    <Compile Include="ExitBlock.cs" />
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="ScreenPlaceHolder.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="StaticBlock.cs" />
+    <Compile Include="TreeBlock.cs" />
+    <Compile Include="WorldManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -74,6 +92,18 @@
     <Content Include="MonoGame.Framework.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="GameContent\TestWorld\TestLevel1\House.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameContent\TestWorld\TestLevel1\treeBlocksKey.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameContent\TestWorld\TestLevel1\Level1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameContent\TestWorld\TestLevel1\depthBlocksKey.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
@@ -84,6 +114,11 @@
       <Link>libSDL2-2.0.0.dylib</Link>
       <Kind>Static</Kind>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GameContent\" />
+    <Folder Include="GameContent\TestWorld\" />
+    <Folder Include="GameContent\TestWorld\TestLevel1\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

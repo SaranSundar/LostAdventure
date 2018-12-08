@@ -1,10 +1,15 @@
 ﻿using System;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+
 namespace LostAdventure.MacOS
 {
-    public class CharacterInterface
+    interface CharacterInterface
     {
-        public CharacterInterface()
-        {
-        }
+
+        void update(KeyboardState kb, String dir, bool attacking);
+
+        void draw(SpriteBatch sb);
+
     }
 }
